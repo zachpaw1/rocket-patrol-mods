@@ -16,7 +16,7 @@ class Menu extends Phaser.Scene {
         // menu text configuration
         let menuConfig = {
             fontFamily: 'Courier',
-            fontSize: '28px',
+            fontSize: '20px',
             backgroundColor: '#F3B141',
             color: '#843605',
             align: 'right',
@@ -28,8 +28,9 @@ class Menu extends Phaser.Scene {
         }
 
     // show menu text
-    this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderPadding, 'ROCKET PATROL', menuConfig).setOrigin(0.5);
-    this.add.text(game.config.width/2, game.config.height/2, 'Use ←→ arrows to move & (F) to fire', menuConfig).setOrigin(0.5);
+    this.add.text(game.config.width/2, game.config.height/2 - borderUISize * 2 - borderPadding * 2, 'ROCKET PATROL', menuConfig).setOrigin(0.5);
+    this.add.text(game.config.width/2, game.config.height/2 - borderUISize * 1 - borderPadding * 1, 'P1, use ←→ arrows to move & ↑ arrow to fire', menuConfig).setOrigin(0.5);
+    this.add.text(game.config.width/2, game.config.height/2, 'P2, use (A) and (D) keys to move & (W) to fire', menuConfig).setOrigin(0.5);
     menuConfig.backgroundColor = '#00FF00';
     menuConfig.color = '#000';
     this.add.text(game.config.width/2, game.config.height/2 + borderUISize + borderPadding, 'Press ← for Novice or → for Expert', menuConfig).setOrigin(0.5);
