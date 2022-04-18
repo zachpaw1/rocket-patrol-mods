@@ -9,9 +9,14 @@ class Menu extends Phaser.Scene {
         this.load.audio('sfx_select', './assets/assets_blip_select12.wav');
         this.load.audio('sfx_explosion', './assets/assets_explosion38.wav');
         this.load.audio('sfx_rocket', './assets/assets_rocket_shot.wav');
+        this.load.audio('bgm', './assets/assets_bgm.mp3');
     }
 
     create() {
+        // background music
+        this.bgm = this.sound.add('bgm');
+        this.bgm.play();
+        this.bgm.loop = true;
 
         // menu text configuration
         let menuConfig = {
@@ -51,6 +56,7 @@ class Menu extends Phaser.Scene {
             }
             this.sound.play('sfx_select');
             this.scene.start('playScene');
+            this.bgm.stop();
         }
         if (Phaser.Input.Keyboard.JustDown(keyRIGHT)) {
 
@@ -62,6 +68,7 @@ class Menu extends Phaser.Scene {
             }
             this.sound.play('sfx_select');
             this.scene.start('playScene');
+            this.bgm.stop();
         }
     }
 }
