@@ -35,8 +35,8 @@ class Play extends Phaser.Scene {
         this.add.rectangle(game.config.width - borderUISize, 0, borderUISize, game.config.height, 0xFFFFFF).setOrigin(0, 0);
 
         // add rockets (p1 and p2)
-        this.p1Rocket = new Rocket(this, game.config.width/2+40, game.config.height - borderUISize - borderPadding, 'rocket', 0, keyLEFT, keyRIGHT, keyUP).setOrigin(0.5, 0);
-        this.p2Rocket = new Rocket(this, game.config.width/2-40, game.config.height - borderUISize - borderPadding, 'rocket', 0, keyA, keyD, keyW).setOrigin(0.5, 0);
+        this.p1Rocket = new Rocket(this, game.config.width/2+40, game.config.height - borderUISize - borderPadding, 'rocket', 0, keyLEFT, keyRIGHT, keyUP).setOrigin(0.5, 0.5);
+        this.p2Rocket = new Rocket(this, game.config.width/2-40, game.config.height - borderUISize - borderPadding, 'rocket', 0, keyA, keyD, keyW).setOrigin(0.5, 0.5);
 
         // add spaceships (x3)
         this.ship01 = new Spaceship(this, game.config.width + borderUISize * 6, borderUISize * 4, 'spaceship', 0, 30).setOrigin(0, 0);
@@ -78,7 +78,7 @@ class Play extends Phaser.Scene {
           scoreConfig.fixedWidth = 0;
           this.clock = this.time.delayedCall(game.settings.gameTimer, () => {
               this.add.text(game.config.width/2, game.config.height/2, 'GAME OVER', scoreConfig).setOrigin(0.5);
-              this.add.text(game.config.width/2, game.config.height/2 + 64, 'Press (↑) to Restart or ← for Menu', scoreConfig).setOrigin(0.5);
+              this.add.text(game.config.width/2, game.config.height/2 + 64, 'Press ↑ to Restart or ← for Menu', scoreConfig).setOrigin(0.5);
               this.gameOver = true;
             }, null, this);
     }
