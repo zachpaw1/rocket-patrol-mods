@@ -31,4 +31,4 @@ let keyW, keyA, keyD, keyLEFT, keyRIGHT, keyUP
 // Used code from labs.phaser.io to get the implementation of the particle emitter (link is in Canvas submission)
 // Received help from Peyton Jones on how to get the particle emitter to actually work
 // Used code that Jimmy shared on Discord to get looping music
-// Background music is "The Sound of Water Drops" by Tomomi Kato on Pixabay
+// Background music is "The Sound of Water Drops" by Tomomi Kato on pixabay
